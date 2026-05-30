@@ -39,7 +39,10 @@ if ProcessInfo.processInfo.environment["SPI_BUILDER"] == "1" {
 }
 
 // GRDB+SQLCipher: Uncomment those lines
-dependencies.append(.package(url: "https://github.com/Androp0v/SQLCipher.swift", from: "4.11.0"))
+dependencies.append(.package(
+    url: "https://github.com/Androp0v/SQLCipher.swift",
+    branch: "master"
+))
 cSettings.append(.define("SQLITE_HAS_CODEC"))
 swiftSettings.append(.define("SQLITE_HAS_CODEC"))
 swiftSettings.append(.define("SQLCipher"))
